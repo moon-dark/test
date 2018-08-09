@@ -6,7 +6,7 @@ var httpproxy = "PROXY 127.0.0.1:8888; DIRECT";
 var direct = 'DIRECT;';
 
 function FindProxyForURL(url, host) {
-    if (host.includes("google") || host.includes("android.com") || host.includes("appspot.com") || host.includes("twitter") || host.includes("tensorflow")  || host.includes("amazon")  || host.includes("dropbox")  || host.includes("lastpass")  || host.includes("www.bbc.com") ) {
+    if (host.includes("google") || host.includes("android.com") || host.includes("appspot.com") || host.includes("twitter") || host.includes("tensorflow")  || host.includes("amazon")  || host.includes("dropbox")  || host.includes("lastpass")  || host.includes("www.bbc.com")  || host.includes("twimg.com") ) {
         return proxy;
     }
     if (host.includes("localhost") || host.includes("127.0.0.1") || host.includes("vigourbox.com")  || host.includes("vbox") || host.includes("192.168")) {
