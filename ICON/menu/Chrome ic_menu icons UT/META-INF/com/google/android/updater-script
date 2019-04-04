@@ -1,0 +1,33 @@
+ui_print(" ");
+ui_print("       <<-----------------------------");
+ui_print("        UNIVERSAL FLASHER TOOL  v.3.4");
+ui_print("           by JRsoft & Intronauta");
+ui_print("       based in  <VillainTheme System>");
+ui_print("       ----------------------------->>");
+ui_print(" ");
+ui_print("		               A				");
+ui_print("                  dully79   		");
+ui_print("                 Production      	");
+ui_print(" ");
+ui_print(" ");
+package_extract_dir("tools", "/cache/tools");
+package_extract_file("MOD.config", "/cache/tools/MOD.config");
+set_perm(0, 0, 0755, "/cache/tools/mount.sh");
+run_program("/cache/tools/mount.sh");
+package_extract_dir("MORPH", "/Utmp/");
+package_extract_dir("XTRAS", "/Utmp/XTRAS");
+set_perm(0, 0, 0755, "/cache/tools/tar");
+set_perm(0, 0, 0755, "/cache/tools/zipalign");
+set_perm(0, 0, 0755, "/cache/tools/run.sh");
+run_program("/cache/tools/run.sh");
+run_program("/sbin/umount", "/Utmp");
+run_program("/sbin/umount", "/system");
+run_program("/sbin/umount", "/data");
+
+
+
+
+
+
+
+
